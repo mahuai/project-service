@@ -17,6 +17,7 @@
     <properties>
         <spring-boot.version>2.0.3.RELEASE</spring-boot.version>
         <spring-data-releasetrain.version>Fowler-SR2</spring-data-releasetrain.version>
+        <druid.version>1.1.10</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -35,6 +36,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
