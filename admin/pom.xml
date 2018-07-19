@@ -21,8 +21,9 @@
     </modules>
 
     <properties>
-        <admin-api-version>1.0-SNAPSHOT</admin-api-version>
-        <admin-service-version>1.0-SNAPSHOT</admin-service-version>
+        <admin-api.version>1.0-SNAPSHOT</admin-api.version>
+        <admin-service.version>1.0-SNAPSHOT</admin-service.version>
+        <base.version>1.0-SNAPSHOT</base.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -31,13 +32,19 @@
             <dependency>
                 <groupId>com.pro</groupId>
                 <artifactId>admin-api</artifactId>
-                <version>${admin-api-version}</version>
+                <version>${admin-api.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.pro</groupId>
                 <artifactId>admin-service</artifactId>
-                <version>${admin-service-version}</version>
+                <version>${admin-service.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.pro</groupId>
+                <artifactId>base</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+            
         </dependencies>
     </dependencyManagement>
 

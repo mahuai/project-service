@@ -1,35 +1,14 @@
-package com.admin.api.entity.response;
+package com.admin.api.entity.request;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * return properties
- *
- * @author ms
+ * @author future
+ * @Description:
+ * @Package com.admin.api.entity.requestproject-service
+ * @date: Created in 2018/7/317:36
  */
-public class AdminResponseBean  implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    public AdminResponseBean() {
-    }
-
-    public AdminResponseBean(Integer affectedRows) {
-        this.affectedRows = affectedRows;
-    }
-
-    private Integer affectedRows;
-
-    public Integer getAffectedRows() {
-        return affectedRows;
-    }
-
-    public void setAffectedRows(Integer affectedRows) {
-        this.affectedRows = affectedRows;
-    }
-
-
+public class AdminPageListRequestBean {
 
     /**
      * 主键id 32位UUID
@@ -83,6 +62,10 @@ public class AdminResponseBean  implements Serializable {
      * 最后修改时间
      **/
     private java.util.Date updateTime;
+
+    private Integer pageNum;
+
+    private Integer pageSize;
 
     public String getId() {
         return id;
@@ -186,5 +169,21 @@ public class AdminResponseBean  implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public Integer getPageNum() {
+        return pageNum;
+    }
+
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }

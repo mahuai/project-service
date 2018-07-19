@@ -1,35 +1,14 @@
-package com.admin.api.entity.response;
+package com.admin.api.entity.request;
 
-import java.io.Serializable;
 import java.util.Date;
 
 /**
- * return properties
- *
- * @author ms
+ * @author future
+ * @Description:
+ * @Package com.admin.api.entity.requestproject-service
+ * @date: Created in 2018/7/311:05
  */
-public class AdminResponseBean  implements Serializable {
-
-    private static final long serialVersionUID = 1L;
-
-    public AdminResponseBean() {
-    }
-
-    public AdminResponseBean(Integer affectedRows) {
-        this.affectedRows = affectedRows;
-    }
-
-    private Integer affectedRows;
-
-    public Integer getAffectedRows() {
-        return affectedRows;
-    }
-
-    public void setAffectedRows(Integer affectedRows) {
-        this.affectedRows = affectedRows;
-    }
-
-
+public class AdminRegisterRequestBean {
 
     /**
      * 主键id 32位UUID

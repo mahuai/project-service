@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 自动生成代码开始 以下代码不可手动修改 每次自动生成代码会覆盖掉 -->
+<mapper namespace="com.admin.service.dao.AdminDao">
+
+    <!-- Result Map-->
+    <resultMap id="BaseResultMap" type="com.admin.service.entity.AdminBean">
+        <result column="id" property="id"/>
+        <result column="login_name" property="loginName"/>
+        <result column="login_pwd" property="loginPwd"/>
+        <result column="nickname" property="nickname"/>
+        <result column="email" property="email"/>
+        <result column="role_id" property="roleId"/>
+        <result column="role_name" property="roleName"/>
+        <result column="level" property="level"/>
+        <result column="salt" property="salt"/>
+        <result column="effect" property="effect"/>
+        <result column="cellphone" property="cellphone"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- t_admin table all fields -->
+    <sql id="Base_Column_List">
+	  t.id,t.login_name,t.login_pwd,t.nickname,t.email,t.role_id,t.role_name,t.level,t.salt,t.effect,t.cellphone,t.create_time,t.update_time
+    </sql>
+
+
+    <!-- 查询条件 -->
+    <sql id="Example_Where_Clause">
+        where 1=1
+        <if test="id != null  and id != ''">
+            and t.id = #{id}
+        </if>
+        <if test="loginName != null  and loginName != ''">
+            and t.login_name = #{loginName}
+        </if>
+        <if test="loginPwd != null  and loginPwd != ''">
+            and t.login_pwd = #{loginPwd}
+        </if>
+        <if test="nickname != null  and nickname != ''">
+            and t.nickname = #{nickname}
+        </if>
+        <if test="email != null  and email != ''">
+            and t.email = #{email}
+        </if>
+        <if test="roleId != null  and roleId != ''">
+            and t.role_id = #{roleId}
+        </if>
+        <if test="roleName != null  and roleName != ''">
+            and t.role_name = #{roleName}
+        </if>
+        <if test="level != null ">
+            and t.level = #{level}
+        </if>
+        <if test="salt != null  and salt != ''">
+            and t.salt = #{salt}
+        </if>
+        <if test="effect != null ">
+            and t.effect = #{effect}
+        </if>
+        <if test="cellphone != null  and cellphone != ''">
+            and t.cellphone = #{cellphone}
+        </if>
+        <if test="createTime != null ">
+            and t.create_time = #{createTime}
+        </if>
+        <if test="updateTime != null ">
+            and t.update_time = #{updateTime}
+        </if>
+    </sql>
+
+    <select id="getConditionsByInfo" resultMap="BaseResultMap" parameterType="Object">
+        select
+        <include refid="Base_Column_List"/>
+        from t_admin t
+        where 1=1 and t.login_name=#{loginName} and t.login_pwd=#{loginPwd}
+    </select>
+
+    <!-- 插入记录 -->
+    <insert id="add" parameterType="Object">
+      insert into t_admin(id,login_name,login_pwd,nickname,email,role_id,role_name,level,salt,cellphone,create_time)
+      values(#{id},#{loginName},#{loginPwd},#{nickname},#{email},#{roleId},#{roleName},#{level},#{salt},#{cellphone},now())
+    </insert>
+
+    <!-- 批量插入记录 -->
+    <!--<insert id="addBatch" parameterType="java.util.List">
+        insert into
+        t_admin(id,login_name,login_pwd,nickname,email,role_id,role_name,level,salt,effect,cellphone,create_time,update_time)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.id},#{item.loginName},#{item.loginPwd},#{item.nickname},#{item.email},#{item.roleId},#{item.roleName},#{item.level},#{item.salt},#{item.effect},#{item.cellphone},#{item.createTime},#{item.updateTime})
+        </foreach>
+    </insert>-->
+
+    <!-- 根据id，修改记录-->
+    <update id="getIdByUpdate" parameterType="Object">
+      update t_admin set login_name=#{loginName},login_pwd=#{loginPwd},nickname=#{nickname},email=#{email},role_id=#{roleId},role_name=#{roleName},level=#{level},salt=#{salt},effect=#{effect},cellphone=#{cellphone},update_time=#{updateTime} where id=#{id}
+    </update>
+
+    <!-- 修改记录，只修改只不为空的字段 -->
+    <update id="updateBySelective" parameterType="Object">
+        update t_admin set
+        <trim suffixOverrides=",">
+            <if test="loginName != null  and loginName != '' ">
+                login_name=#{loginName},
+            </if>
+            <if test="loginPwd != null  and loginPwd != '' ">
+                login_pwd=#{loginPwd},
+            </if>
+            <if test="nickname != null  and nickname != '' ">
+                nickname=#{nickname},
+            </if>
+            <if test="email != null  and email != '' ">
+                email=#{email},
+            </if>
+            <if test="roleId != null  and roleId != '' ">
+                role_id=#{roleId},
+            </if>
+            <if test="roleName != null  and roleName != '' ">
+                role_name=#{roleName},
+            </if>
+            <if test="level != null  ">
+                level=#{level},
+            </if>
+            <if test="salt != null  and salt != '' ">
+                salt=#{salt},
+            </if>
+            <if test="effect != null  ">
+                effect=#{effect},
+            </if>
+            <if test="cellphone != null  and cellphone != '' ">
+                cellphone=#{cellphone},
+            </if>
+            <if test="createTime != null  ">
+                create_time=#{createTime},
+            </if>
+            <if test="updateTime != null  ">
+                update_time=#{updateTime},
+            </if>
+        </trim>
+        where id=#{id}
+    </update>
+
+    <!-- 删除记录 -->
+    <delete id="getIdBydel" parameterType="Object">
+	    delete 	 from t_admin  where id = #{id}
+    </delete>
+
+    <!-- 根据id查询 用户表 -->
+    <select id="getIdByInfo" resultMap="BaseResultMap" parameterType="Object">
+        select
+        <include refid="Base_Column_List"/>
+        from t_admin t where id = #{id}
+    </select>
+
+    <!-- 用户表 列表总数-->
+    <select id="queryCount" resultType="java.lang.Integer" parameterType="Object">
+        select count(1) from t_admin t
+        <include refid="Example_Where_Clause"/>
+    </select>
+
+    <!-- 查询用户表列表 -->
+    <select id="getPageList" resultMap="BaseResultMap" parameterType="Object">
+        select
+        <include refid="Base_Column_List"/>
+        from t_admin t
+        <include refid="Example_Where_Clause"/>
+
+    </select>
+
+    <!-- 自动生成代码结束 以上代码不可手动修改 -->
+
+    <!-- 手动编写的代码开始 -->
+
+
+</mapper>   

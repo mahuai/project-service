@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="admin-api" />
         <module name="admin-service" />
+        <module name="base" />
       </profile>
     </annotationProcessing>
   </component>
