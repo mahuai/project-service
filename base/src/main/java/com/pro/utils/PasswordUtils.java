@@ -65,4 +65,9 @@ public class PasswordUtils {
         return MD5Utils.md5ToUpperCase(pwd + salt);
     }
 
+    public static void main(String[] args) {
+        String salt=UUIDUtils.getStringRandom(8);
+        System.out.println(salt);
+        System.out.println(getPasswordByString("admin",salt));
+    }
 }

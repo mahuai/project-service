@@ -11,6 +11,7 @@ import com.admin.service.entity.AdminBean;
 import com.alibaba.dubbo.config.annotation.Service;
 import com.github.pagehelper.PageHelper;
 import com.pro.base.bean.PageBean;
+import com.pro.utils.PasswordUtils;
 import com.pro.utils.UUIDUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -65,9 +66,12 @@ public class AdminServiceImpl implements AdminService {
 
     public AdminResponseBean formatBean(AdminBean adminBean) {
         AdminResponseBean adminResponseBean = new AdminResponseBean();
-        adminResponseBean.setLoginName(adminBean.getLoginName());
+        adminResponseBean.setAccount(adminBean.getLoginName());
         adminResponseBean.setEmail(adminBean.getEmail());
-        adminResponseBean.setNickname(adminBean.getNickname());
+        adminResponseBean.setNickName(adminBean.getNickname());
+        adminResponseBean.setRoleId(adminBean.getRoleId());
+        adminResponseBean.setRoleName(adminBean.getRoleName());
+        adminResponseBean.setEffect(adminBean.getEffect());
         return adminResponseBean;
     }
 
@@ -82,9 +86,16 @@ public class AdminServiceImpl implements AdminService {
     public AdminResponseBean login(AdminLoginRequestBean adminLoginRequestBean) throws LoginException {
         AdminBean admin = null;
         try {
-            logger.info("账号：{}，密码：{}", adminLoginRequestBean.getLoginName(), adminLoginRequestBean.getLoginPwd());
-            admin = (AdminBean) adminDao.getConditionsByInfo(adminLoginRequestBean);
-            return formatBean(admin);
+            logger.info("账号：{}，密码：{}", adminLoginRequestBean.getAccount(), adminLoginRequestBean.getPassword());
+            admin = (AdminBean) adminDao.getConditionsByInfo(new AdminBean(adminLoginRequestBean.getAccount(), null));
+            if (admin == null) {
+                throw new LoginException("账号未注册");
+            }
+            boolean flag = PasswordUtils.checkPassword(adminLoginRequestBean.getAccount(), admin.getLoginPwd(), admin.getSalt());
+            if (flag) {
+                logger.info("login success-------------->{}", admin.getLoginName());
+                return formatBean(admin);
+            }
         } catch (Exception e) {
             logger.error("login error: ", e);
         }
@@ -107,12 +118,12 @@ public class AdminServiceImpl implements AdminService {
     protected AdminBean conversion(AdminRegisterRequestBean adminRegisterRequestBean) {
         AdminBean adminBean = new AdminBean();
         adminBean.setId(UUIDUtils.getUUID());
-        adminBean.setLoginName(adminRegisterRequestBean.getLoginName());
-        adminBean.setLoginPwd(adminRegisterRequestBean.getLoginPwd());
-        adminBean.setCellphone(adminRegisterRequestBean.getCellphone());
-        adminBean.setNickname(adminRegisterRequestBean.getNickname());
+        adminBean.setLoginName(adminRegisterRequestBean.getAccount());
+        adminBean.setCellphone(adminRegisterRequestBean.getPhone());
+        adminBean.setNickname(adminRegisterRequestBean.getNickName());
         adminBean.setEffect(adminRegisterRequestBean.getEffect());
-        adminBean.setSalt(adminRegisterRequestBean.getSalt());
+        adminBean.setSalt(UUIDUtils.getStringRandom(8));
+        adminBean.setLoginPwd(PasswordUtils.getPasswordByString(adminRegisterRequestBean.getAccount(), adminBean.getSalt()));
         adminBean.setLevel(adminRegisterRequestBean.getLevel());
         adminBean.setRoleId(adminRegisterRequestBean.getRoleId());
         adminBean.setRoleName(adminRegisterRequestBean.getRoleName());

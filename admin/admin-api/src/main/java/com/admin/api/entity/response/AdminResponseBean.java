@@ -38,15 +38,15 @@ public class AdminResponseBean  implements Serializable {
     /**
      * 用户登录名
      **/
-    private java.lang.String loginName;
+    private java.lang.String account;
     /**
      * 登录用密码
      **/
-    private java.lang.String loginPwd;
+    private java.lang.String password;
     /**
      * 用户昵称
      **/
-    private java.lang.String nickname;
+    private java.lang.String nickName;
     /**
      * 邮箱
      **/
@@ -74,7 +74,7 @@ public class AdminResponseBean  implements Serializable {
     /**
      * 手机号
      **/
-    private java.lang.String cellphone;
+    private java.lang.String phone;
     /**
      * 创建时间
      **/
@@ -92,28 +92,28 @@ public class AdminResponseBean  implements Serializable {
         this.id = id;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getAccount() {
+        return account;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public String getLoginPwd() {
-        return loginPwd;
+    public String getPassword() {
+        return password;
     }
 
-    public void setLoginPwd(String loginPwd) {
-        this.loginPwd = loginPwd;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getNickname() {
-        return nickname;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getEmail() {
@@ -164,12 +164,12 @@ public class AdminResponseBean  implements Serializable {
         this.effect = effect;
     }
 
-    public String getCellphone() {
-        return cellphone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setCellphone(String cellphone) {
-        this.cellphone = cellphone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public Date getCreateTime() {

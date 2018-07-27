@@ -11,6 +11,14 @@ public class AdminBean implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    public AdminBean() {
+    }
+
+    public AdminBean(String loginName, String loginPwd) {
+        this.loginName = loginName;
+        this.loginPwd = loginPwd;
+    }
+
     /**
      * 主键id 32位UUID
      **/

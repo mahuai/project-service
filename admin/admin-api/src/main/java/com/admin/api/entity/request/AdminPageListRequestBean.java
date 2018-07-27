@@ -1,5 +1,6 @@
 package com.admin.api.entity.request;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -8,24 +9,19 @@ import java.util.Date;
  * @Package com.admin.api.entity.requestproject-service
  * @date: Created in 2018/7/317:36
  */
-public class AdminPageListRequestBean {
+public class AdminPageListRequestBean implements Serializable {
 
-    /**
-     * 主键id 32位UUID
-     **/
-    private java.lang.String id;
+    private static final long serialVersionUID = 1L;
+
     /**
      * 用户登录名
      **/
-    private java.lang.String loginName;
-    /**
-     * 登录用密码
-     **/
-    private java.lang.String loginPwd;
+    private java.lang.String account;
+
     /**
      * 用户昵称
      **/
-    private java.lang.String nickname;
+    private java.lang.String nickName;
     /**
      * 邮箱
      **/
@@ -42,10 +38,7 @@ public class AdminPageListRequestBean {
      * 管理员等级
      **/
     private java.lang.Integer level;
-    /**
-     * 盐值
-     **/
-    private java.lang.String salt;
+
     /**
      * 0：无效 1：有效 2：删除
      **/
@@ -53,7 +46,7 @@ public class AdminPageListRequestBean {
     /**
      * 手机号
      **/
-    private java.lang.String cellphone;
+    private java.lang.String phone;
     /**
      * 创建时间
      **/
@@ -67,36 +60,20 @@ public class AdminPageListRequestBean {
 
     private Integer pageSize;
 
-    public String getId() {
-        return id;
+    public String getAccount() {
+        return account;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setAccount(String account) {
+        this.account = account;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
-    }
-
-    public String getLoginPwd() {
-        return loginPwd;
-    }
-
-    public void setLoginPwd(String loginPwd) {
-        this.loginPwd = loginPwd;
-    }
-
-    public String getNickname() {
-        return nickname;
-    }
-
-    public void setNickname(String nickname) {
-        this.nickname = nickname;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
     public String getEmail() {
@@ -131,14 +108,6 @@ public class AdminPageListRequestBean {
         this.level = level;
     }
 
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
-
     public Integer getEffect() {
         return effect;
     }
@@ -147,12 +116,12 @@ public class AdminPageListRequestBean {
         this.effect = effect;
     }
 
-    public String getCellphone() {
-        return cellphone;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setCellphone(String cellphone) {
-        this.cellphone = cellphone;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public Date getCreateTime() {

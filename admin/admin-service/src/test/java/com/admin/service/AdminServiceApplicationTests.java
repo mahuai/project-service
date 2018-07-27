@@ -30,8 +30,8 @@ public class AdminServiceApplicationTests {
     @Test
     public void loginTest() {
         AdminLoginRequestBean requestBean = new AdminLoginRequestBean();
-        requestBean.setLoginName("admin");
-        requestBean.setLoginPwd("admin");
+        requestBean.setAccount("admin");
+        requestBean.setPassword("admin");
         AdminResponseBean responseBean = adminService.login(requestBean);
         if (responseBean != null) {
             System.out.println("查询成功");
