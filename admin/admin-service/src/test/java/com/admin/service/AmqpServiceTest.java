@@ -13,8 +13,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Package com.admin.service
  * @date: Created in 2018/7/23 16:01
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = AdminServiceApplication.class)
+/*@RunWith(SpringRunner.class)
+@SpringBootTest(classes = AdminServiceApplication.class)*/
 public class AmqpServiceTest {
 
     @Autowired
@@ -22,7 +22,7 @@ public class AmqpServiceTest {
 
     private static final String QUEUE = "amqp-queue";
 
-    @Test
+//    @Test
     public void convertAndSendTest() {
         amqpService.convertAndSend(QUEUE, "rabbit mq send test: send success");
     }

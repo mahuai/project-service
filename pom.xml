@@ -13,6 +13,7 @@
     <modules>
         <module>admin</module>
         <module>base</module>
+        <module>message</module>
     </modules>
 
     <properties>
@@ -34,6 +35,7 @@
         <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
         <activiti.version>6.0.0</activiti.version>
         <mongodb.version>2.0.8.RELEASE</mongodb.version>
+        <swagger2.version>2.9.2</swagger2.version>
     </properties>
 
     <dependencyManagement>
@@ -144,15 +146,14 @@
                 <version>${activiti.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
-
-    <!--<distributionManagement>
-        <repository>
-            <id></id>
-            <layout></layout>
-        </repository>
-    </distributionManagement>-->
 
 </project>

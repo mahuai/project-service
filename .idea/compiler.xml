@@ -9,6 +9,8 @@
         <module name="admin-api" />
         <module name="admin-service" />
         <module name="base" />
+        <module name="message-api" />
+        <module name="message-service" />
       </profile>
     </annotationProcessing>
   </component>

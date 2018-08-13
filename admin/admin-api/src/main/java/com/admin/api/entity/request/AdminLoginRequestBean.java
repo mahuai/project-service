@@ -1,5 +1,7 @@
 package com.admin.api.entity.request;
 
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
@@ -17,14 +19,19 @@ public class AdminLoginRequestBean implements Serializable {
     /**
      * 用户登录名
      **/
+    @ApiModelProperty(value = "账号", name = "account")
     @NotNull(message = "账号不能为空")
     private java.lang.String account;
     /**
      * 登录用密码
      **/
+    @ApiModelProperty(value = "密码", name = "password")
     @NotNull(message = "密码不能为空")
     private java.lang.String password;
-
+    /**
+     * 验证码
+     */
+    @ApiModelProperty(value = "验证码", name = "code")
     private String code;
 
     public String getAccount() {

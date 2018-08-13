@@ -3,31 +3,32 @@ package com.admin.service;
 import com.admin.api.entity.request.AdminLoginRequestBean;
 import com.admin.api.entity.response.AdminResponseBean;
 import com.admin.api.service.AdminService;
+import com.pro.utils.RedisUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest(classes = AdminServiceApplication.class)
+import java.util.ArrayList;
+import java.util.List;
+
+/*@RunWith(SpringRunner.class)
+@SpringBootTest(classes = AdminServiceApplication.class)*/
 public class AdminServiceApplicationTests {
 
     private static final String REDIS_KEY = "REDIS:TEST:";
     @Autowired
     private AdminService adminService;
 
-    /*@Autowired
+    @Autowired
     private RedisUtils redisUtils;
 
-    @Test
     public void redisTest() {
-//        redisUtils.set(REDIS_KEY, "test");
-        String value = redisUtils.get(REDIS_KEY);
-        System.out.println(value);
-    }*/
 
-    @Test
+    }
+
+    //    @Test
     public void loginTest() {
         AdminLoginRequestBean requestBean = new AdminLoginRequestBean();
         requestBean.setAccount("admin");

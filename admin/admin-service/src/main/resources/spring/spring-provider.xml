@@ -7,8 +7,11 @@
        http://dubbo.apache.org/schema/dubbo
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="admin"/>
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
-    <dubbo:protocol port="60001" name="dubbo"/>
+    <dubbo:application name="${dubbo.application.name}"/>
+    <dubbo:registry address="${dubbo.registry.address}"/>
+    <dubbo:protocol port="${dubbo.protocol.port}" name="${dubbo.protocol.name}"/>
+    <dubbo:provider loadbalance="${dubbo.provider.loadbalance}" timeout="${dubbo.provider.timeout}"
+                    retries="${dubbo.provider.retries}"/>
+
     <dubbo:annotation package="com.admin.service.implement"/>
 </beans>

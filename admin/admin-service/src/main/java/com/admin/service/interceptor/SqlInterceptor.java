@@ -21,8 +21,8 @@ import java.util.Properties;
 /**
  * @author future
  * @Description:
- * @Package com.admin.service.config.interceptorproject-service
- * @date: Created in 2018/7/414:44
+ * @Package com.admin.service.config.interceptor project-service
+ * @date: Created in 2018/7/4 14:44
  */
 @Intercepts(value = {
         @Signature(type = Executor.class,

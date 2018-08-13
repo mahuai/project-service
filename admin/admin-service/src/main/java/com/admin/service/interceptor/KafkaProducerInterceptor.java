@@ -39,7 +39,7 @@ public class KafkaProducerInterceptor implements ProducerInterceptor {
      */
     @Override
     public void close() {
-
+        logger.info("interceptor close.......");
     }
 
     /**

@@ -6,10 +6,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisNode;
+import org.springframework.data.redis.connection.RedisSentinelConfiguration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+
+import java.util.HashSet;
+import java.util.LinkedList;
 
 
 /**
@@ -30,6 +36,11 @@ public class RedisConfig {
         logger.info("init redis-------->{}", RedisConfig.class);
     }
 
+    /**
+     * redis单节点配置类
+     *
+     * @return
+     */
     @Bean
     public RedisStandaloneConfiguration redisStandaloneConfiguration() {
         RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration();
@@ -39,13 +50,34 @@ public class RedisConfig {
         return redisStandaloneConfiguration;
     }
 
+    /**
+     * redis多节点
+     *
+     * @return
+     */
+
+//    @Bean
+    public RedisSentinelConfiguration sentinelConfiguration() {
+        RedisSentinelConfiguration configuration = new RedisSentinelConfiguration();
+        configuration.setDatabase(properties.getDatabase());
+        configuration.addSentinel(new RedisNode(properties.getHost(), properties.getPort()));
+
+        //新建redis节点，进行多借点配置
+        /*RedisNode redisNode = new RedisNode(properties.getHost(), properties.getPort());
+        Iterable<RedisNode> sentinels = new LinkedList<>();
+        ((LinkedList<RedisNode>) sentinels).add(redisNode);
+        configuration.setSentinels(sentinels);*/
+        return configuration;
+    }
+
+
     @Bean
     public JedisConnectionFactory connectionFactory() {
         return new JedisConnectionFactory(redisStandaloneConfiguration());
     }
 
     @Bean
-    public StringRedisSerializer stringRedisSerializer() {
+    public RedisSerializer stringRedisSerializer() {
         return new StringRedisSerializer();
     }
 
@@ -56,6 +88,7 @@ public class RedisConfig {
         redisTemplate.setKeySerializer(stringRedisSerializer());
         redisTemplate.setValueSerializer(stringRedisSerializer());
         redisTemplate.setHashKeySerializer(stringRedisSerializer());
+        redisTemplate.setHashValueSerializer(stringRedisSerializer());
         return redisTemplate;
     }
 }

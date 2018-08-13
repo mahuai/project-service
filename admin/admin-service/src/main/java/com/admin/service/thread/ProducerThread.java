@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @author ms
@@ -28,19 +29,37 @@ public class ProducerThread extends Thread {
         Producer producer = new KafkaProducer(assembleProperties());
         for (int i = 0; i < SIZE; i++) {
             logger.info("send start------------------------>");
-            /* producer.send(new ProducerRecord<>("project-topic", Integer.toString(i), Integer.toString(i)));*/
-            producer.send(new ProducerRecord<>("project-topic", Integer.toString(i), Integer.toString(i)), new Callback() {
-                @Override
-                public void onCompletion(RecordMetadata metadata, Exception exception) {
-                    if (exception != null) {
-                        logger.error("send error-------->{}", exception);
-                    } else {
-                        logger.info("<------------------------------------------------------------->");
-                        logger.info("The offset of the record we just sent is:{}", metadata.offset());
-                        logger.info("<------------------------------------------------------------->");
+
+            /*try {
+                RecordMetadata o = (RecordMetadata) producer.send(new ProducerRecord<>("project-topic", Integer.toString(i), Integer.toString(i))).get();
+                logger.info("offset------------->:{}", o.offset());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }*/
+            try {
+                /**
+                 * producer.send().get() 返回 RecordMetadata 可以获取消息的偏移量
+                 */
+                RecordMetadata o = (RecordMetadata) producer.send(new ProducerRecord<>("project-topic", Integer.toString(i), Integer.toString(i)), new Callback() {
+                    @Override
+                    public void onCompletion(RecordMetadata metadata, Exception exception) {
+                        if (exception != null) {
+                            logger.error("send error-------->{}", exception);
+                        } else {
+                            logger.info("<------------------------------------------------------------->");
+                            logger.info("The offset of the record we just sent is:{}", metadata.offset());
+                            logger.info("<------------------------------------------------------------->");
+                        }
                     }
-                }
-            });
+                }).get();
+                logger.info("offset------------->:{}", o.offset());
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            }
         }
     }
 

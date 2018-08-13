@@ -27,6 +27,11 @@ public class RedisImpl implements RedisUtils {
     @Autowired
     private RedisTemplate<String, ?> redisTemplate;
 
+    /**
+     * 删除key
+     *
+     * @param key
+     */
     @Override
     public void remove(final String key) {
         if (exists(key)) {
@@ -35,11 +40,24 @@ public class RedisImpl implements RedisUtils {
     }
 
 
+    /**
+     * 判断key是否存在
+     *
+     * @param key
+     * @return
+     */
     @Override
     public boolean exists(final String key) {
         return redisTemplate.hasKey(key);
     }
 
+    /**
+     * 保存key value
+     *
+     * @param key
+     * @param value
+     * @return
+     */
     @Override
     public boolean set(final String key, final String value) {
         boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
@@ -54,6 +72,14 @@ public class RedisImpl implements RedisUtils {
     }
 
 
+    /**
+     * 保存key value 存活时间
+     *
+     * @param key
+     * @param value
+     * @param expireTime
+     * @return
+     */
     @Override
     public boolean set(final String key, final String value, final Long expireTime) {
         boolean result = redisTemplate.execute(new RedisCallback<Boolean>() {
@@ -68,6 +94,12 @@ public class RedisImpl implements RedisUtils {
         return result;
     }
 
+    /**
+     * 根据key获取value
+     *
+     * @param key
+     * @return
+     */
     @Override
     public String get(final String key) {
         String result = redisTemplate.execute(new RedisCallback<String>() {
@@ -81,23 +113,55 @@ public class RedisImpl implements RedisUtils {
         return result;
     }
 
+    /**
+     * 给定key 存活时间
+     *
+     * @param key
+     * @param expire
+     * @return
+     */
     @Override
     public boolean expire(final String key, long expire) {
         return redisTemplate.expire(key, expire, TimeUnit.SECONDS);
     }
 
+    /**
+     * 保存key value(集合)
+     *
+     * @param key
+     * @param list
+     * @param <T>
+     * @return
+     */
     @Override
     public <T> boolean setList(String key, List<T> list) {
         String value = JsonUtils.objtoJson(list);
         return set(key, value);
     }
 
+    /**
+     * 保存key value(集合) 存活时间
+     *
+     * @param key
+     * @param list
+     * @param expireTime
+     * @param <T>
+     * @return
+     */
     @Override
     public <T> boolean setList(final String key, final List<T> list, final Long expireTime) {
         String value = JsonUtils.objtoJson(list);
         return set(key, value, expireTime);
     }
 
+    /**
+     * 根据key 获取value
+     *
+     * @param key
+     * @param clz
+     * @param <T>
+     * @return
+     */
     @Override
     public <T> List<T> getList(final String key, final Class<T> clz) {
         String json = get(key);
@@ -113,6 +177,12 @@ public class RedisImpl implements RedisUtils {
         return null;
     }
 
+    /**
+     * 将所有指定值插入密钥存储的列表的开头
+     * @param key
+     * @param obj
+     * @return
+     */
     @Override
     public long lPush(final String key, final Object obj) {
         final String value = JsonUtils.objtoJson(obj);
@@ -127,6 +197,12 @@ public class RedisImpl implements RedisUtils {
         return result;
     }
 
+    /**
+     *将所有指定的值插入存储在key中的列表的尾部
+     * @param key
+     * @param obj
+     * @return
+     */
     @Override
     public long rPush(final String key, final Object obj) {
         final String value = JsonUtils.objtoJson(obj);
@@ -141,6 +217,11 @@ public class RedisImpl implements RedisUtils {
         return result;
     }
 
+    /**
+     * 删除并返回key中存储的列表的第一个元素。
+     * @param key
+     * @return
+     */
     @Override
     public String lPop(final String key) {
         String result = redisTemplate.execute(new RedisCallback<String>() {
@@ -155,10 +236,16 @@ public class RedisImpl implements RedisUtils {
     }
 
 
+    /**
+     * 获得key的剩余存活时间
+     * @param key
+     * @return
+     */
     @Override
     public Long TTL(String key) {
         return redisTemplate.getExpire(key);
     }
+
 
     @Override
     public boolean saveObject(String key, Object obj) {

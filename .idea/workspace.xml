@@ -1,28 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b19a45bb-fb90-4611-86fb-8e4a651f965d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/service/AmqpService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/ActivitiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/enmu/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AmqpServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java" afterDir="false" />
+    <list default="true" id="b19a45bb-fb90-4611-86fb-8e4a651f965d" name="Default" comment="1.0-SNAPSHOT&#10;工作流 and amqp RabbitMQ">
+      <change afterPath="$PROJECT_DIR$/base/src/main/java/com/pro/utils/AttachmentSuffixUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendEmailRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendSmsRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/response/MessageResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/exception/MessageException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendEmailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendSmsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/MessageServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/bean/QueueWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/InitializationThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/properties/EmailProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendEmailServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendSmsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/queue/SystemQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/thread/SendSmsThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/resources/application-alphal.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/resources/banner.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/main/resources/spring/spring-provider.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/message-service/src/test/java/com/message/service/MessageServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/message/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-api/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminLoginRequestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminLoginRequestBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminPageListRequestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminPageListRequestBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminRegisterRequestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminRegisterRequestBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/response/AdminResponseBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/response/AdminResponseBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/DataSourceConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/entity/AdminBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/entity/AdminBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/KafkaProducerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/KafkaProducerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/SqlInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/SqlInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/utils/RedisImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/utils/RedisImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/resources/application-test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/resources/application-alphal.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/resources/mapper/AdminMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/resources/mapper/AdminMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/resources/logback.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/main/resources/spring/spring-provider.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/main/resources/spring/spring-provider.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AdminServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AdminServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/base/src/main/java/com/pro/utils/PasswordUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/base/src/main/java/com/pro/utils/PasswordUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,6 +63,9 @@
     <ignored path="$PROJECT_DIR$/admin/admin-api/target/" />
     <ignored path="$PROJECT_DIR$/admin/admin-service/target/" />
     <ignored path="$PROJECT_DIR$/base/target/" />
+    <ignored path="$PROJECT_DIR$/message/message-api/target/" />
+    <ignored path="$PROJECT_DIR$/message/target/" />
+    <ignored path="$PROJECT_DIR$/message/message-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,36 +92,76 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/resources/application.properties">
+      <file leaf-file-name="SendEmailServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendEmailServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="63" column="37" lean-forward="true" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+            <state relative-caret-position="471">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AmqpConfig.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java">
+      <file leaf-file-name="SendSmsServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendSmsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+            <state relative-caret-position="537">
+              <caret line="34" column="48" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MessageResponse.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/response/MessageResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="569">
+              <caret line="41" column="10" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="10" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1259#1260#0" expanded="true" />
-                <element signature="e#1314#1315#0" expanded="true" />
-                <element signature="e#1352#1353#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#882#883#0" expanded="true" />
+                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#981#982#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivitiConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/ActivitiConfig.java">
+      <file leaf-file-name="SystemQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/queue/SystemQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+            <state relative-caret-position="457">
+              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlockingQueue.java" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/concurrent/BlockingQueue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="198" column="12" selection-start-line="198" selection-start-column="12" selection-end-line="198" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendSmsThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/thread/SendSmsThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2279#2280#0" expanded="true" />
+                <element signature="e#2342#2343#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InitializationThread.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/InitializationThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -94,27 +169,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSourceConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/DataSourceConfig.java">
+      <file leaf-file-name="MessageServiceApplicationTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/test/java/com/message/service/MessageServiceApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3036">
-              <caret line="107" column="58" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="58" />
+            <state relative-caret-position="424">
+              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-                <element signature="e#1484#1485#0" expanded="true" />
-                <element signature="e#4365#4366#0" expanded="true" />
-                <element signature="e#4434#4435#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1318#1319#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/enmu/Test.java">
+      <file leaf-file-name="QueueWrapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/bean/QueueWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="27" />
+            <state relative-caret-position="-156">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmailProperties.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/properties/EmailProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -124,30 +205,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ui</find>
-      <find>StringUtils</find>
-      <find>httpclient.version</find>
-      <find>dubbo.version</find>
-      <find>RetryPolicy</find>
-      <find>curator</find>
-      <find>curator-framework.version</find>
-      <find>this.send</find>
-      <find>send</find>
-      <find>configs</find>
-      <find>swagger2.version</find>
-      <find>getConditionsByInfo</find>
-      <find>Example_Where_Clause</find>
-      <find>dataBase</find>
       <find>爨</find>
       <find>dataSource</find>
       <find>SpringProcessEngineConfiguration</find>
@@ -164,6 +231,20 @@
       <find>processEngineConfiguration</find>
       <find>create</find>
       <find>StandaloneProcessEngineConfiguration</find>
+      <find>set</find>
+      <find>spring.redis</find>
+      <find>swagger2.version</find>
+      <find>mail</find>
+      <find>html</find>
+      <find>Spring embedded WebApplicationContext</find>
+      <find>Initializing Spring embedded WebApplicationContext</find>
+      <find>start</find>
+      <find>log4j</find>
+      <find>StandardServletEnvironment</find>
+      <find>expire</find>
+      <find>offset</find>
+      <find>get</find>
+      <find>offset-------------&gt;</find>
     </findStrings>
     <replaceStrings>
       <replace>LoginException</replace>
@@ -177,57 +258,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/admin/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/Swagger2Config.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/application-test.properties" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/bean/HttpResponseBean.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/StringUtils.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/HttpUtils.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/spring/spring-provider.xml" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/logback.xml" />
-        <option value="$PROJECT_DIR$/admin/admin-api/pom.xml" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/BaseController.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/Heard.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/result/Heard.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/bean/BaseBean.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/result/Header.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/result/ReturnResult.java" />
         <option value="$PROJECT_DIR$/base/pom.xml" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/base/result/BaseController.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/properties/RedisProperties.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/properties/ProducerProperties.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/interceptor/KafkaProducerInterceptor.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/thread/ProducerThread.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/thread/ConsumerThread.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/KafKaConfig.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/SessionUtils.java" />
-        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/PasswordUtils.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/mapper/AdminMapper.xml" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/entity/AdminBean.java" />
-        <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminPageListRequestBean.java" />
-        <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminRegisterRequestBean.java" />
-        <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/response/AdminResponseBean.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AdminServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java" />
+        <option value="$PROJECT_DIR$/admin/admin-api/pom.xml" />
         <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/request/AdminLoginRequestBean.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/DataSourceConfig.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/WorkflowConfig.java" />
-        <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/service/AmqpService.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AmqpServiceImpl.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java" />
+        <option value="$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/entity/response/AdminResponseBean.java" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/admin/admin-service/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/properties/ActivitiConfig.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendMailService.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/MessageServiceApplication.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/config/properties/EmailProperties.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/exception/MessageException.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/impl/SendMailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendMailRequest.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendEmailService.java" />
+        <option value="$PROJECT_DIR$/message/pom.xml" />
+        <option value="$PROJECT_DIR$/base/src/main/java/com/pro/utils/AttachmentSuffixUtil.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/impl/SendEmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendSmsService.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/bean/QueueWrapper.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/test/java/com/pro/message/service/MessageServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/queue/SystemQueue.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/config/InitializationThread.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/impl/SendSmsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/pro/message/service/thread/SendSmsThread.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/logback.xml" />
+        <option value="$PROJECT_DIR$/message/message-api/pom.xml" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendEmailRequest.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendSmsRequest.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/bean/QueueWrapper.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/ThreadPoolConfig.java" />
         <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/AdminServiceApplication.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/ActivitiConfig.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/enmu/Test.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/bpmn/approvalProcess.bpmn" />
-        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/spring/spring-provider.xml" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/resources/spring/spring-provider.xml" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/resources/application-alphal.properties" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/resources/application-alphal.properties" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/MessageServiceApplication.java" />
+        <option value="$PROJECT_DIR$/message/message-service/pom.xml" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AdminServiceApplicationTests.java" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/utils/RedisImpl.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/thread/SendSmsThread.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/queue/SystemQueue.java" />
+        <option value="$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/response/MessageResponse.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendEmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendSmsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/InitializationThread.java" />
+        <option value="$PROJECT_DIR$/message/message-service/src/test/java/com/message/service/MessageServiceApplicationTests.java" />
       </list>
     </option>
   </component>
@@ -256,12 +337,12 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="admin-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="message-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="admin-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+          <item name="message-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
@@ -283,6 +364,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -294,162 +377,229 @@
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="enmu" type="462c0819:PsiDirectoryNode" />
+              <item name="implement" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
               <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project-service" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="admin-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="queue" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="thread" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project-service" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="message-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="message" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project-service" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="concurrent" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -457,30 +607,34 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="ArrayStoreException&#9;PSI&#9;JAVA://java.lang.ArrayStoreException&#10;RetryPolicy&#9;PSI&#9;JAVA://org.apache.curator.RetryPolicy&#10;Sender &#9;PSI&#9;JAVA://com.sun.javafx.webkit.drt.EventSender&#10;dubbo.x&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/com/alibaba/dubbo/2.6.2/dubbo-2.6.2.jar!/META-INF/dubbo.xsd&#10;Dubbo&#9;PSI&#9;JAVA://com.alibaba.dubbo.config.spring.schema.DubboBeanDefinitionParser&#10;ContextLoaderLi&#9;PSI&#9;JAVA://org.springframework.web.context.ContextLoaderListener&#10;RepositoryConfigurationDelegate&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-commons/2.0.8.RELEASE/spring-data-commons-2.0.8.RELEASE-sources.jar!/org/springframework/data/repository/config/RepositoryConfigurationDelegate.java&#10;RedisConnectionFactory&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisConnectionFactory.java&#10;EnableRedisRepositories&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/repository/configuration/EnableRedisRepositories.java&#10;JedisConnectionConfiguration&#9;null&#9;null&#10;RedisProperties&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/1.5.2.RELEASE/spring-data-redis-1.5.2.RELEASE.jar!/org/springframework/data/redis/support/collections/RedisProperties.class&#10;StringRedisTemplate &#9;PSI&#9;JAVA://org.springframework.data.redis.core.StringRedisTemplate&#10;logback&#9;FILE&#9;file://D:/learnSpace/project-service/admin/admin-service/src/main/resources/logback.xml&#10;Logger&#9;PSI&#9;JAVA://org.slf4j.Logger&#10;PageInfo&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4-sources.jar!/com/github/pagehelper/PageInfo.java&#10;PageHe&#9;PSI&#9;JAVA://com.github.pagehelper.PageHelper&#10;AdminServiceImpl&#9;FILE&#9;file://D:/learnSpace/project-service/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java&#10;DataSource&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/sql/DataSource.java&#10;DataSourceFactory&#9;PSI&#9;JAVA://org.apache.ibatis.datasource.DataSourceFactory&#10;AnnotationConfigApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.annotation.AnnotationConfigApplicationContext" />
+    <property name="SearchEverywhereHistoryKey" value="Avro&#9;PSI&#9;JAVA://org.springframework.data.repository.util.QueryExecutionConverters.NullableWrapperToVavrOptionConverter&#10;StandardServletEnvironment&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/spring-web/5.0.7.RELEASE/spring-web-5.0.7.RELEASE-sources.jar!/org/springframework/web/context/support/StandardServletEnvironment.java&#10;LoggerFactory&#9;PSI&#9;JAVA://org.slf4j.LoggerFactory&#10;RedisConnection&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisConnection.java&#10;RedisTemp&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java&#10;RedisTe&#9;PSI&#9;JAVA://org.springframework.data.redis.core.RedisTemplate&#10;ApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.ApplicationContext&#10;ArrayStoreException&#9;PSI&#9;JAVA://java.lang.ArrayStoreException&#10;RetryPolicy&#9;PSI&#9;JAVA://org.apache.curator.RetryPolicy&#10;Sender &#9;PSI&#9;JAVA://com.sun.javafx.webkit.drt.EventSender&#10;dubbo.x&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/com/alibaba/dubbo/2.6.2/dubbo-2.6.2.jar!/META-INF/dubbo.xsd&#10;Dubbo&#9;PSI&#9;JAVA://com.alibaba.dubbo.config.spring.schema.DubboBeanDefinitionParser&#10;ContextLoaderLi&#9;PSI&#9;JAVA://org.springframework.web.context.ContextLoaderListener&#10;RepositoryConfigurationDelegate&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-commons/2.0.8.RELEASE/spring-data-commons-2.0.8.RELEASE-sources.jar!/org/springframework/data/repository/config/RepositoryConfigurationDelegate.java&#10;RedisConnectionFactory&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisConnectionFactory.java&#10;EnableRedisRepositories&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/repository/configuration/EnableRedisRepositories.java&#10;JedisConnectionConfiguration&#9;null&#9;null&#10;RedisProperties&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/org/springframework/data/spring-data-redis/1.5.2.RELEASE/spring-data-redis-1.5.2.RELEASE.jar!/org/springframework/data/redis/support/collections/RedisProperties.class&#10;StringRedisTemplate &#9;PSI&#9;JAVA://org.springframework.data.redis.core.StringRedisTemplate&#10;logback&#9;FILE&#9;file://D:/learnSpace/project-service/admin/admin-service/src/main/resources/logback.xml&#10;Logger&#9;PSI&#9;JAVA://org.slf4j.Logger&#10;PageInfo&#9;FILE&#9;jar://G:/Maven-Warehouse/.m2/repository/com/github/pagehelper/pagehelper/5.1.4/pagehelper-5.1.4-sources.jar!/com/github/pagehelper/PageInfo.java&#10;PageHe&#9;PSI&#9;JAVA://com.github.pagehelper.PageHelper&#10;AdminServiceImpl&#9;FILE&#9;file://D:/learnSpace/project-service/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java&#10;DataSource&#9;FILE&#9;jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/javax/sql/DataSource.java&#10;DataSourceFactory&#9;PSI&#9;JAVA://org.apache.ibatis.datasource.DataSourceFactory&#10;AnnotationConfigApplicationContext&#9;PSI&#9;JAVA://org.springframework.context.annotation.AnnotationConfigApplicationContext" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../public-base" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com" />
+      <recent name="com.pro.message.service" />
       <recent name="com.admin.service" />
       <recent name="com.admin" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.message.service.config" />
       <recent name="com.pro.config.properties" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\learnSpace\project-service\admin\admin-service\src\main\resources\spring" />
+      <recent name="D:\learnSpace\project-service\message\message-service\src\main\resources" />
+      <recent name="D:\learnSpace\project-service\message\message-service\src\main\resources\spring" />
       <recent name="D:\learnSpace\project-service\base\src\main\java\com\pro\base\result" />
       <recent name="D:\learnSpace\project-service\base\src\main\java\com\pro\base" />
-      <recent name="D:\learnSpace\project-service\admin\admin-service\src\main\resources\spring" />
-      <recent name="D:\learnSpace\project-service\admin\admin-service\src\main\resources\mapper" />
-      <recent name="D:\learnSpace\project-service\admin\admin-service\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -495,28 +649,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AdminServiceApplication">
+  <component name="RunManager" selected="JUnit.MessageServiceApplicationTests.sendSmsTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="AmqpServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.admin.service.AmqpServiceTest" />
-      <module name="admin-service" />
+    <configuration name="MessageServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.message.service.MessageServiceApplication" />
+      <module name="message-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.admin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="PasswordUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.pro.utils.PasswordUtils" />
-      <module name="base" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pro.utils.*" />
+          <option name="PATTERN" value="com.message.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -524,42 +667,19 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
-    <configuration name="AdminServiceApplicationTests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="admin-service" />
+    <configuration name="MessageServiceApplicationTests.sendSmsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="message-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.admin.service.*" />
+          <option name="PATTERN" value="com.message.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.admin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.admin.service.AdminServiceApplicationTests" />
-      <option name="METHOD_NAME" value="loginTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="AmqpServiceTest.convertAndSendTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="admin-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.admin.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.admin.service" />
-      <option name="MAIN_CLASS_NAME" value="com.admin.service.AmqpServiceTest" />
-      <option name="METHOD_NAME" value="convertAndSendTest" />
+      <option name="PACKAGE_NAME" value="com.message.service" />
+      <option name="MAIN_CLASS_NAME" value="com.message.service.MessageServiceApplicationTests" />
+      <option name="METHOD_NAME" value="sendSmsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -614,17 +734,13 @@
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminServiceApplication" />
-      <item itemvalue="JUnit.AdminServiceApplicationTests.loginTest" />
-      <item itemvalue="Application.PasswordUtils" />
-      <item itemvalue="JUnit.AmqpServiceTest.convertAndSendTest" />
-      <item itemvalue="Application.AmqpServiceTest" />
+      <item itemvalue="Application.MessageServiceApplication" />
+      <item itemvalue="JUnit.MessageServiceApplicationTests.sendSmsTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AmqpServiceTest" />
-        <item itemvalue="JUnit.AmqpServiceTest.convertAndSendTest" />
-        <item itemvalue="Application.PasswordUtils" />
-        <item itemvalue="JUnit.AdminServiceApplicationTests.loginTest" />
+        <item itemvalue="JUnit.MessageServiceApplicationTests.sendSmsTest" />
+        <item itemvalue="Application.MessageServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -659,7 +775,22 @@
       <workItem from="1531992162873" duration="10318000" />
       <workItem from="1532309765900" duration="24871000" />
       <workItem from="1532568687085" duration="3656000" />
-      <workItem from="1532655040925" duration="11920000" />
+      <workItem from="1532655040925" duration="13368000" />
+      <workItem from="1532914455779" duration="2809000" />
+      <workItem from="1532937454284" duration="1173000" />
+      <workItem from="1533000846381" duration="4857000" />
+      <workItem from="1533023591994" duration="314000" />
+      <workItem from="1533023952189" duration="433000" />
+      <workItem from="1533024442135" duration="18457000" />
+      <workItem from="1533289165361" duration="641000" />
+      <workItem from="1533522267142" duration="11060000" />
+      <workItem from="1533609228465" duration="11593000" />
+      <workItem from="1533625834677" duration="17666000" />
+      <workItem from="1533700774593" duration="21775000" />
+      <workItem from="1533796717084" duration="139000" />
+      <workItem from="1533880120689" duration="3200000" />
+      <workItem from="1533892187560" duration="1445000" />
+      <workItem from="1534124726851" duration="3177000" />
     </task>
     <task id="LOCAL-00001" summary="1.0-SNAPSHOT&#10;add druid">
       <created>1530006045653</created>
@@ -675,79 +806,95 @@
       <option name="project" value="LOCAL" />
       <updated>1531972206635</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="1.0-SNAPSHOT&#10;工作流 and amqp RabbitMQ">
+      <created>1532679588376</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1532679588376</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 16h 25m 11s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendMailTest - 2018.08.08 at 10h 37m 52s.xml">
+      <configuration name="MessageServiceApplicationTests.sendMailTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 16h 26m 36s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendSmsTest - 2018.08.08 at 10h 55m 47s.xml">
+      <configuration name="MessageServiceApplicationTests.sendSmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 16h 27m 38s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendSmsTest - 2018.08.08 at 11h 03m 49s.xml">
+      <configuration name="MessageServiceApplicationTests.sendSmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 16h 53m 36s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendSmsTest - 2018.08.08 at 11h 06m 05s.xml">
+      <configuration name="MessageServiceApplicationTests.sendSmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 16h 56m 42s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendSmsTest - 2018.08.08 at 11h 07m 32s.xml">
+      <configuration name="MessageServiceApplicationTests.sendSmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 17h 04m 03s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="MessageServiceApplicationTests_sendSmsTest - 2018.08.08 at 11h 21m 24s.xml">
+      <configuration name="MessageServiceApplicationTests.sendSmsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 17h 06m 42s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="AdminServiceApplicationTests_redisTest - 2018.08.09 at 10h 27m 53s.xml">
+      <configuration name="AdminServiceApplicationTests.redisTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 17h 07m 05s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="AdminServiceApplicationTests_redisTest - 2018.08.09 at 10h 28m 08s.xml">
+      <configuration name="AdminServiceApplicationTests.redisTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 17h 07m 49s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="AdminServiceApplicationTests_redisTest - 2018.08.09 at 10h 29m 50s.xml">
+      <configuration name="AdminServiceApplicationTests.redisTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AmqpServiceTest_convertAndSendTest - 2018.07.23 at 17h 09m 36s.xml">
-      <configuration name="AmqpServiceTest.convertAndSendTest" configurationId="JUnit" />
+    <history-entry file="AdminServiceApplicationTests_redisTest - 2018.08.09 at 10h 30m 42s.xml">
+      <configuration name="AdminServiceApplicationTests.redisTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269421000" />
+    <option name="totallyTimeSpent" value="369608000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50319827" side_tool="true" weight="0.31624863" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50373137" side_tool="true" weight="0.40567067" />
       <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info auto_hide="true" id="BPMN Editor" type="SLIDING" weight="0.32995737" />
-      <window_info id="Capture Tool" order="2" />
+      <window_info id="Capture Tool" order="8" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="9" weight="0.32995737" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.4968017" weight="0.14612868" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Messages" order="3" weight="0.3217012" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.49626866" weight="0.05452563" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3293348" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info id="Image Layers" order="2" />
+      <window_info id="Image Layers" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="13" visible="true" weight="0.0" />
-      <window_info anchor="bottom" id="Spring" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945474" visible="true" weight="0.24200426" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.07960741" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3293348" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49945474" visible="true" weight="0.2857143" />
       <window_info anchor="right" id="Bean Validation" order="7" weight="0.32995737" />
-      <window_info id="Web" order="2" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="right" id="BPMNPalette" order="10" weight="0.32995737" />
       <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info id="Favorites" order="2" sideWeight="0.50054526" side_tool="true" weight="0.25746268" />
+      <window_info id="Favorites" order="5" sideWeight="0.50054526" side_tool="true" weight="0.25746268" />
+      <window_info auto_hide="true" id="BPMN Editor" order="6" type="SLIDING" weight="0.32995737" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.9182116" />
       <window_info anchor="bottom" id="Message" order="8" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="9" weight="0.3293348" />
@@ -755,40 +902,52 @@
     <layout-to-restore>
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.827699" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Spring" order="6" weight="0.3293348" />
       <window_info id="Image Layers" order="3" />
-      <window_info anchor="bottom" id="Find" order="10" weight="0.3293348" />
-      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="13" weight="0.07960741" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info id="Favorites" order="5" sideWeight="0.50054526" side_tool="true" weight="0.25746268" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
+      <window_info id="Capture Tool" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.5010661" side_tool="true" weight="0.69029444" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.9912759" />
-      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50373137" side_tool="true" weight="0.40567067" />
+      <window_info auto_hide="true" id="BPMN Editor" order="6" type="SLIDING" weight="0.32995737" />
+      <window_info anchor="bottom" id="TODO" order="12" weight="0.3293348" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" />
+      <window_info anchor="right" id="BPMNPalette" order="10" weight="0.32995737" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="5" weight="0.32995737" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24413647" />
-      <window_info anchor="right" id="Database" order="6" weight="0.32995737" />
-      <window_info anchor="bottom" id="Message" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3293348" />
+      <window_info anchor="right" id="Maven Projects" order="4" weight="0.32995737" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49945474" visible="true" weight="0.282516" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.9182116" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32995737" />
+      <window_info anchor="bottom" id="Message" order="8" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="2" sideWeight="0.4989339" weight="0.0" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.3293348" />
+      <window_info anchor="right" id="Bean Validation" order="7" weight="0.32995737" />
+      <window_info active="true" anchor="bottom" id="Debug" order="2" sideWeight="0.49626866" visible="true" weight="0.05452563" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -797,7 +956,8 @@
     <MESSAGE value="add druid" />
     <MESSAGE value="1.0-SNAPSHOT&#10;add druid" />
     <MESSAGE value="1.0-SNAPSHOT&#10;Summary commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0-SNAPSHOT&#10;Summary commit" />
+    <MESSAGE value="1.0-SNAPSHOT&#10;工作流 and amqp RabbitMQ" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0-SNAPSHOT&#10;工作流 and amqp RabbitMQ" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -813,425 +973,519 @@
           <properties />
           <option name="timeStamp" value="61" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>338</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar!/javax/mail/internet/MimeMessage.class</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>353</line>
+          <properties />
+          <option name="timeStamp" value="84" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>358</line>
+          <properties />
+          <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>416</line>
+          <properties />
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>504</line>
+          <properties />
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-context-support/5.0.7.RELEASE/spring-context-support-5.0.7.RELEASE-sources.jar!/org/springframework/mail/javamail/JavaMailSenderImpl.java</url>
+          <line>527</line>
+          <properties />
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar!/javax/mail/Session.class</url>
+          <line>208</line>
+          <properties />
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar!/javax/mail/Session.class</url>
+          <line>212</line>
+          <properties />
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/sun/mail/javax.mail/1.6.1/javax.mail-1.6.1.jar!/javax/mail/Session.class</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="64" />
+      <option name="time" value="114" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>factoryBean.getObject()</expression-string>
+        <expression-string>getHost()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dataSource</expression-string>
+        <expression-string>getPort()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>publisherConnectionFactory</expression-string>
+        <expression-string>mimeMessage</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>listener</expression-string>
+        <expression-string>javaMailProperties</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>record</expression-string>
+        <expression-string>getSession()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>responseBean</expression-string>
+        <expression-string>sender.createMimeMessage()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>responseList</expression-string>
+        <expression-string>emailProperties.getUsername()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>resolver.getResources(&quot;classpath:/*Mapper.xml&quot;)</expression-string>
+        <expression-string>sender</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>sessionFactory</expression-string>
+        <expression-string>properties.getPort()</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.3.RELEASE/spring-boot-starter-test-2.0.3.RELEASE.pom">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE.jar!/org/springframework/data/redis/config/spring-redis.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/config/package-info.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-amqp/2.0.3.RELEASE/spring-boot-starter-amqp-2.0.3.RELEASE.jar!/META-INF/MANIFEST.MF">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-amqp/2.0.3.RELEASE/spring-boot-starter-amqp-2.0.3.RELEASE.jar!/META-INF/spring.provides">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-dependencies/2.0.3.RELEASE/spring-boot-dependencies-2.0.3.RELEASE.pom">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/core/StringRedisTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="288" column="51" selection-start-line="288" selection-start-column="51" selection-end-line="288" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-amqp/2.0.3.RELEASE/spring-boot-starter-amqp-2.0.3.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="15" selection-end-line="56" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1160">
-          <caret line="89" column="19" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/5.0.7.RELEASE/spring-test-5.0.7.RELEASE.jar!/org/springframework/test/context/junit4/SpringJUnit4ClassRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="91" selection-start-line="91" selection-end-line="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/rabbitmq/amqp-client/5.1.2/amqp-client-5.1.2-sources.jar!/com/rabbitmq/client/ConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/service/AmqpService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="25" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/CompositeConnectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="29" column="58" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/ConnectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="26" column="3" lean-forward="true" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/Connection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/ConnectionProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="47" lean-forward="true" selection-start-line="28" selection-start-column="47" selection-end-line="28" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitListeners.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="113" column="68" selection-start-line="113" selection-start-column="53" selection-end-line="113" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/listener/RabbitListenerEndpointRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-656">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/AbstractConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="323" selection-start-line="323" selection-end-line="323" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpConnectionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-429">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.4.RELEASE/spring-rabbit-2.0.4.RELEASE-sources.jar!/org/springframework/amqp/rabbit/connection/CachingConnectionFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="414" column="58" selection-start-line="414" selection-start-column="58" selection-end-line="414" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/properties/RedisProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/dao/AdminDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/entity/AdminBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AmqpServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="34" column="58" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/pro/base/bean/BaseBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/pro/base/bean/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="45" column="27" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/KafKaConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="35" column="53" selection-start-line="35" selection-start-column="53" selection-end-line="35" selection-end-column="53" />
-          <folding>
-            <element signature="e#1703#1704#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/listener/AmqpChannelListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ConsumerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="46" column="52" lean-forward="true" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/KafkaProducerInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="142" column="39" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$MAVEN_REPOSITORY$/org/activiti/activiti-spring/6.0.0/activiti-spring-6.0.0.pom">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6732">
-          <caret line="204" column="46" selection-start-line="204" selection-start-column="46" selection-end-line="204" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/properties/DruidProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2140">
-          <caret line="135" column="21" lean-forward="true" selection-start-line="135" selection-start-column="21" selection-end-line="135" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/activiti/activiti-engine/6.0.0/activiti-engine-6.0.0-sources.jar!/org/activiti/engine/impl/cfg/StandaloneProcessEngineConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        <state relative-caret-position="285">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/AdminServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="264">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="28" />
+          <folding>
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisCallback.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="120" selection-start-line="120" selection-end-line="120" />
+        <state relative-caret-position="285">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/activiti/activiti-spring/6.0.0/activiti-spring-6.0.0-sources.jar!/org/activiti/spring/ProcessEngineFactoryBean.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisKeyCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="87" column="74" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="74" />
+        <state relative-caret-position="252">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/activiti/activiti-spring/6.0.0/activiti-spring-6.0.0-sources.jar!/org/activiti/spring/SpringProcessEngineConfiguration.java">
+    <entry file="file://$PROJECT_DIR$/base/src/main/java/com/pro/utils/RedisUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="45" column="62" lean-forward="true" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/activiti/activiti-engine/6.0.0/activiti-engine-6.0.0-sources.jar!/org/activiti/engine/impl/cfg/ProcessEngineConfigurationImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="1770" column="108" selection-start-line="1770" selection-start-column="72" selection-end-line="1770" selection-end-column="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/activiti/activiti-engine/6.0.0/activiti-engine-6.0.0-sources.jar!/org/activiti/engine/ProcessEngineConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="410" column="36" selection-start-line="410" selection-start-column="36" selection-end-line="410" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+        <state relative-caret-position="259">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AdminServiceApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="12" selection-end-column="56" />
+        <state relative-caret-position="132">
+          <caret line="15" column="2" selection-start-line="15" selection-end-line="16" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/test/java/com/admin/service/AmqpServiceTest.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/connection/RedisListCommands.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="30" column="7" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
-          <folding>
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#777#778#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="384">
+          <caret line="54" column="51" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="806" column="16" selection-start-line="806" selection-start-column="16" selection-end-line="806" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-redis/2.0.8.RELEASE/spring-data-redis-2.0.8.RELEASE-sources.jar!/org/springframework/data/redis/core/RedisOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="301" column="21" lean-forward="true" selection-start-line="301" selection-start-column="21" selection-end-line="301" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/utils/RedisImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6798">
+          <caret line="248" selection-start-line="248" selection-end-line="248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/exception/MessageException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2091">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/concurrent/TimeUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="104" column="4" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/resources/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3757">
+          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendSmsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/service/SendEmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendSmsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/request/SendEmailRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java" />
     <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/ActivitiConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="363">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/DataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3036">
-          <caret line="107" column="58" selection-start-line="107" selection-start-column="40" selection-end-line="107" selection-end-column="58" />
+        <state relative-caret-position="297">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-api/src/main/java/com/admin/api/service/AmqpService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AmqpServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="801">
+          <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0-sources.jar!/org/apache/kafka/clients/producer/KafkaProducer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="301" column="11" selection-start-line="301" selection-start-column="11" selection-end-line="301" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0-sources.jar!/org/apache/kafka/clients/producer/RecordMetadata.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/concurrent/Future.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="93" column="66" selection-start-line="93" selection-start-column="63" selection-end-line="93" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0-sources.jar!/org/apache/kafka/clients/producer/Producer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="72" column="6" selection-start-line="72" selection-start-column="6" selection-end-line="72" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.0.8.RELEASE/spring-data-commons-2.0.8.RELEASE-sources.jar!/org/springframework/data/repository/util/QueryExecutionConverters.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="562" column="25" selection-start-line="562" selection-start-column="25" selection-end-line="562" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/KafKaConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/lang/InterruptedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0-sources.jar!/org/apache/kafka/common/header/internals/RecordHeaders.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/kafka/kafka-clients/1.1.0/kafka-clients-1.1.0-sources.jar!/org/apache/kafka/clients/producer/ProducerRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1617">
+          <caret line="66" column="11" selection-start-line="66" selection-start-column="11" selection-end-line="66" selection-end-column="11" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4434#4435#0" expanded="true" />
+            <element signature="e#6108#6109#0" expanded="true" />
+            <element signature="e#6165#6166#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/resources/bpmn/approvalProcess.bpmn">
-      <provider selected="true" editor-type-id="bpmn-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/enmu/Test.java">
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ProducerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="27" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="27" />
+        <state relative-caret-position="1155">
+          <caret line="42" column="69" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="69" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/thread/ConsumerThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="63" column="37" lean-forward="true" selection-start-line="63" selection-start-column="37" selection-end-line="63" selection-end-column="37" />
+        <state relative-caret-position="405">
+          <caret line="35" column="129" selection-start-line="35" selection-start-column="123" selection-end-line="35" selection-end-column="129" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/config/AmqpConfig.java">
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/KafkaProducerInterceptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+        <state relative-caret-position="-38">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/interceptor/SqlInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2004">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin-service/src/main/java/com/admin/service/implement/AdminServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/MessageServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding>
+            <element signature="e#385#386#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-api/src/main/java/com/message/api/entity/response/MessageResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="569">
+          <caret line="41" column="10" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="10" />
+          <folding>
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendSmsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="34" column="48" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/properties/EmailProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/thread/SendSmsThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="45" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1259#1260#0" expanded="true" />
-            <element signature="e#1314#1315#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
+            <element signature="e#2279#2280#0" expanded="true" />
+            <element signature="e#2342#2343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/implement/SendEmailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="19" selection-end-line="71" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/bean/QueueWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/queue/SystemQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_66/src.zip!/java/util/concurrent/BlockingQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="198" column="12" selection-start-line="198" selection-start-column="12" selection-end-line="198" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/main/java/com/message/service/config/InitializationThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="20" column="50" selection-start-line="20" selection-start-column="50" selection-end-line="20" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/message/message-service/src/test/java/com/message/service/MessageServiceApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+          <folding>
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1293,6 +1547,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
