@@ -1,8 +1,7 @@
 package com.message.api.entity.request;
 
-import java.io.File;
 import java.io.Serializable;
-import java.util.*;
+import java.util.Map;
 
 /**
  * @author ms

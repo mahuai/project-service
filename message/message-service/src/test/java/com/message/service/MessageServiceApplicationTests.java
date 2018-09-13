@@ -24,7 +24,7 @@ public class MessageServiceApplicationTests {
     @Autowired
     private SendSmsService sendSmsService;
 
-    //    @Test
+    @Test
     public void sendMailTest() {
         Map<String, String> attachments = new HashMap<>(1);
         attachments.put("fileName", "C:\\Users\\future\\Desktop\\URL.txt");

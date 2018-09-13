@@ -36,7 +36,13 @@ import java.util.Properties;
                 method = "query",
                 args = {MappedStatement.class, Object.class, RowBounds.class, ResultHandler.class})})
 public class SqlInterceptor implements Interceptor {
+
     private static final Logger logger = LoggerFactory.getLogger(SqlInterceptor.class);
+
+    private static final String INSERT="INSERT";
+    private static final String UPDATE="UPDATE";
+    private static final String DELETE="DELETE";
+    private static final String SELECT="SELECT";
 
     @Override
     public Object intercept(Invocation invocation) throws Throwable {
@@ -50,17 +56,17 @@ public class SqlInterceptor implements Interceptor {
             long end = System.currentTimeMillis();
             final Object[] args = invocation.getArgs();
 
-            //获取原始的ms
+            /**获取原始的ms*/
             MappedStatement ms = (MappedStatement) args[0];
             String commandName = ms.getSqlCommandType().name();
             String name = method.getName();
-            if (commandName.startsWith("INSERT")) {
+            if (commandName.startsWith(INSERT)) {
                 name += "=新增";
-            } else if (commandName.startsWith("UPDATE")) {
+            } else if (commandName.startsWith(UPDATE)) {
                 name += "=修改";
-            } else if (commandName.startsWith("DELETE")) {
+            } else if (commandName.startsWith(DELETE)) {
                 name += "=删除";
-            } else if (commandName.startsWith("SELECT")) {
+            } else if (commandName.startsWith(SELECT)) {
                 name += "=查询";
             }
             String message = "[SqlInterceptor] execute [" + name + "] cost [" + (end - start) + "] ms";
@@ -113,10 +119,6 @@ public class SqlInterceptor implements Interceptor {
     @Override
     public void setProperties(Properties properties) {
 
-    }
-
-    public static void main(String args[]) {
-        System.out.println("你好\n我不好");
     }
 }
 

@@ -1,7 +1,8 @@
 package com.message.service.queue;
 
+import com.alibaba.dubbo.common.utils.NamedThreadFactory;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import com.message.service.bean.QueueWrapper;
+import com.message.service.wrapper.QueueWrapper;
 
 import java.util.concurrent.*;
 
@@ -19,12 +20,12 @@ public class SystemQueue {
      */
     public volatile static BlockingQueue<QueueWrapper> QUEUE_ARRAY = new LinkedBlockingQueue<>(5000);
     /**
+     * protected static ThreadFactory threadFactory = Executors.defaultThreadFactory();
+     * protected static ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("project-pool").build();
      * 线程池
      */
-    protected static ThreadFactory threadFactory = new ThreadFactoryBuilder().setNameFormat("project-pool").build();
     public volatile static ExecutorService EXECUTOR = new ThreadPoolExecutor(10, 50,
             6000, TimeUnit.MILLISECONDS,
-            new LinkedBlockingQueue<>(1024), threadFactory, new ThreadPoolExecutor.AbortPolicy());
-
+            new LinkedBlockingQueue<>(1024), new NamedThreadFactory("project-pool"), new ThreadPoolExecutor.AbortPolicy());
 
 }

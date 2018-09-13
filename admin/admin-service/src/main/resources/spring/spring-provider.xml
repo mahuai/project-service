@@ -7,10 +7,35 @@
        http://dubbo.apache.org/schema/dubbo
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
 
-    <dubbo:application name="${dubbo.application.name}"/>
-    <dubbo:registry address="${dubbo.registry.address}"/>
-    <dubbo:protocol port="${dubbo.protocol.port}" name="${dubbo.protocol.name}"/>
-    <dubbo:provider loadbalance="${dubbo.provider.loadbalance}" timeout="${dubbo.provider.timeout}"
+    <!--
+        <dubbo:application owner="${dubbo.application.owner}"/>
+        现在我们有所有者信息和组织信息来区分网站。当出现问题时，
+        很容易与服务所有者联系，请至少写两个人进行备份。可以在注册表中看到所有者和组织的信息。
+    -->
+    <dubbo:application owner="${dubbo.application.owner}" name="${dubbo.application.name}"/>
+    <!--
+        <dubbo:registry file="${dubbo.registry.file}"/>
+        您可以根据需要修改应用程序的cahe文件路径。确保在发布过程中不会清除该文件。
+        如果有多个应用程序进程，请不要使用相同的文件路径来避免内容被覆盖。
+        此文件缓存注册表列表和服务提供者列表。使用此配置，当重新启动应用程序时，
+        如果Dubbo注册表不可用，则应用程序将从缓存文件中读取服务提供者列表中的信息。这可以确保应用程序的可用性。
+    -->
+    <dubbo:registry version="${dubbo.registry.version}" address="${dubbo.registry.address}"
+                    file="${dubbo.registry.file}"/>
+    <!--
+        threads 服务线程池大小
+    -->
+    <dubbo:protocol threads="200" port="${dubbo.protocol.port}" name="${dubbo.protocol.name}"/>
+    <!--
+        timeout 方法调用超时
+        retries重试失败次数，默认值为1
+        loadbalance负载均衡算法[3]，默认算法是随机的random，轮询roundrobin，最不活跃[4] leastactive
+        actives消费者方面，最大并发呼叫限制
+        serialization 序列化 官方推荐使用hessian
+        proxy="javassist"字节代替反射，性能良好（推荐）
+    -->
+    <dubbo:provider proxy="${dubbo.provider.proxy}" serialization="${dubbo.provider.serialization}"
+                    loadbalance="${dubbo.provider.loadbalance}" timeout="${dubbo.provider.timeout}"
                     retries="${dubbo.provider.retries}"/>
 
     <dubbo:annotation package="com.admin.service.implement"/>

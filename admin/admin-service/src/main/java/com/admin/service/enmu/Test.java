@@ -1,5 +1,8 @@
 package com.admin.service.enmu;
 
+import java.util.Hashtable;
+import java.util.Map;
+
 /**
  * @author ms
  * @Description:
@@ -8,18 +11,31 @@ package com.admin.service.enmu;
  */
 public enum Test {
 
-    TEST_ENMU("test","测试");
+    GET, HEAD, POST, PUT, PATCH, DELETE, OPTIONS, TRACE;
 
-    private String name;
 
-    private String desc;
+    private static Map<String, Object> map = new Hashtable<>(8);
 
-    public String getName() {
-        return name;
+    static {
+        for (Test test : values()) {
+            map.put(test.name(), test);
+        }
     }
 
-    Test(String name, String desc) {
-        this.name = name;
-        this.desc = desc;
+    public static Test resolve(String method) {
+        return (method != null ? (Test) map.get(method) : null);
     }
+
+    public boolean matches(String method) {
+        return (this == resolve(method));
+    }
+
+    public static void main(String[] args) {
+        Test test = resolve("POST");
+        System.out.println(test.matches("POST"));
+        System.out.println(test);
+
+    }
+
+
 }

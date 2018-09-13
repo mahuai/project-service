@@ -14,7 +14,7 @@ import java.util.Arrays;
 /**
  * @author future
  * @Description:
- * @Package com.admin.service.configproject-service
+ * @Package com.admin.service.config project-service
  * @date: Created in 2018/7/1214:32
  */
 @Configuration

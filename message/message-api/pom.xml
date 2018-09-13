@@ -13,6 +13,11 @@
     <artifactId>message-api</artifactId>
     <name>message-api</name>
 
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <build>
         <plugins>
             <plugin>

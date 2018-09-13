@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>project-service</artifactId>
+        <groupId>com.pro</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>resource</name>
+    <artifactId>resource</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>resource-api</module>
+        <module>resource-service</module>
+    </modules>
+
+    <properties>
+        <resource-api.version>1.0-SNAPSHOT</resource-api.version>
+        <base.version>1.0-SNAPSHOT</base.version>
+    </properties>
+
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.pro</groupId>
+                <artifactId>resource-api</artifactId>
+                <version>${resource-api.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.pro</groupId>
+                <artifactId>base</artifactId>
+                <version>${base.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+</project>

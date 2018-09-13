@@ -3,15 +3,8 @@ package com.admin.service;
 import com.admin.api.entity.request.AdminLoginRequestBean;
 import com.admin.api.entity.response.AdminResponseBean;
 import com.admin.api.service.AdminService;
-import com.pro.utils.RedisUtils;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import com.base.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /*@RunWith(SpringRunner.class)
 @SpringBootTest(classes = AdminServiceApplication.class)*/

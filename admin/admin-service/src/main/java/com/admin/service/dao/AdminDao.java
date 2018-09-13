@@ -1,6 +1,6 @@
 package com.admin.service.dao;
 
-import com.pro.base.dao.BaseDao;
+import com.base.dao.BaseDao;
 
 /**
  * @author ms

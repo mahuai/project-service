@@ -5,7 +5,7 @@ import com.admin.api.entity.request.AdminPageListRequestBean;
 import com.admin.api.entity.request.AdminRegisterRequestBean;
 import com.admin.api.entity.response.AdminResponseBean;
 import com.admin.api.exception.LoginException;
-import com.pro.base.bean.PageBean;
+import com.base.bean.PageBean;
 
 /**
  * admin service

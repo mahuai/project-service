@@ -1,11 +1,9 @@
 package com.admin.service;
 
 import com.admin.api.service.AmqpService;
-import org.junit.Test;
-import org.junit.runner.RunWith;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.util.ClassUtils;
 
 /**
  * @author ms
@@ -20,14 +18,21 @@ public class AmqpServiceTest {
     @Autowired
     private AmqpService amqpService;
 
+
+
+
+
     private static final String QUEUE = "amqp-queue";
 
-//    @Test
+
+    //    @Test
     public void convertAndSendTest() {
         amqpService.convertAndSend(QUEUE, "rabbit mq send test: send success");
     }
 
     public static void main(String[] args) {
-
+        /*String str=AmqpServiceTest.class.getName().replace('.', '/') + ".class";
+        System.out.println(str);*/
     }
+
 }

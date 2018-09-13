@@ -5,7 +5,7 @@ import com.message.api.entity.request.SendEmailRequest;
 import com.message.api.entity.response.MessageResponse;
 import com.message.api.service.SendEmailService;
 import com.message.service.config.properties.EmailProperties;
-import com.pro.utils.AttachmentSuffixUtil;
+import com.base.utils.AttachmentSuffixUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

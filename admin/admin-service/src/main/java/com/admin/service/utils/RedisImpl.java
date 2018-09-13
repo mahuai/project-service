@@ -1,8 +1,8 @@
 package com.admin.service.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.pro.utils.JsonUtils;
-import com.pro.utils.RedisUtils;
+import com.base.utils.JsonUtils;
+import com.base.utils.RedisUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;

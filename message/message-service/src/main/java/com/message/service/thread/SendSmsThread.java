@@ -1,6 +1,6 @@
 package com.message.service.thread;
 
-import com.message.service.bean.QueueWrapper;
+import com.message.service.wrapper.QueueWrapper;
 import com.message.service.queue.SystemQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

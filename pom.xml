@@ -11,9 +11,16 @@
 
 
     <modules>
+        <!--后台-->
         <module>admin</module>
+        <!--公用-->
         <module>base</module>
+        <!--消息-->
         <module>message</module>
+        <!--第三方-->
+        <module>third-party</module>
+        <!--资源服务-->
+        <module>resource</module>
     </modules>
 
     <properties>
@@ -36,6 +43,7 @@
         <activiti.version>6.0.0</activiti.version>
         <mongodb.version>2.0.8.RELEASE</mongodb.version>
         <swagger2.version>2.9.2</swagger2.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
     <dependencyManagement>
@@ -97,6 +105,14 @@
                 <version>${dubbo.version}</version>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo-serialization-hessian2 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-serialization-hessian2</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+
+
             <!-- https://mvnrepository.com/artifact/com.101tec/zkclient -->
             <dependency>
                 <groupId>com.101tec</groupId>
@@ -151,6 +167,14 @@
                 <artifactId>springfox-swagger2</artifactId>
                 <version>${swagger2.version}</version>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io.version}</version>
+            </dependency>
+
 
         </dependencies>
     </dependencyManagement>

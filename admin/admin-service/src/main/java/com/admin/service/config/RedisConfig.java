@@ -50,25 +50,6 @@ public class RedisConfig {
         return redisStandaloneConfiguration;
     }
 
-    /**
-     * redis多节点
-     *
-     * @return
-     */
-
-//    @Bean
-    public RedisSentinelConfiguration sentinelConfiguration() {
-        RedisSentinelConfiguration configuration = new RedisSentinelConfiguration();
-        configuration.setDatabase(properties.getDatabase());
-        configuration.addSentinel(new RedisNode(properties.getHost(), properties.getPort()));
-
-        //新建redis节点，进行多借点配置
-        /*RedisNode redisNode = new RedisNode(properties.getHost(), properties.getPort());
-        Iterable<RedisNode> sentinels = new LinkedList<>();
-        ((LinkedList<RedisNode>) sentinels).add(redisNode);
-        configuration.setSentinels(sentinels);*/
-        return configuration;
-    }
 
 
     @Bean

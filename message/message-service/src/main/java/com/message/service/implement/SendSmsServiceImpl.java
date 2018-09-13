@@ -4,7 +4,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.message.api.entity.request.SendSmsRequest;
 import com.message.api.entity.response.MessageResponse;
 import com.message.api.service.SendSmsService;
-import com.message.service.bean.QueueWrapper;
+import com.message.service.wrapper.QueueWrapper;
 import com.message.service.queue.SystemQueue;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

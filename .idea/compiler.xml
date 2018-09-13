@@ -11,7 +11,14 @@
         <module name="base" />
         <module name="message-api" />
         <module name="message-service" />
+        <module name="resource-api" />
+        <module name="resource-service" />
+        <module name="third-party-api" />
+        <module name="third-party-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="resoucre" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>
