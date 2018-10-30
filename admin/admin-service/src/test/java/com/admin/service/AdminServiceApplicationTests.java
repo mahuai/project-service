@@ -3,7 +3,9 @@ package com.admin.service;
 import com.admin.api.entity.request.AdminLoginRequestBean;
 import com.admin.api.entity.response.AdminResponseBean;
 import com.admin.api.service.AdminService;
+import com.base.utils.PasswordUtils;
 import com.base.utils.RedisUtils;
+import com.base.utils.UUIDUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /*@RunWith(SpringRunner.class)
@@ -61,10 +63,13 @@ public class AdminServiceApplicationTests {
         if (adminResponseBean.getAffectedRows() > 0) {
             System.out.println("插入成功");
         }
-    }
+    }*/
 
     public static void main(String[] args) {
         System.out.println(UUIDUtils.getUUID());
-    }*/
+
+//        String admin = PasswordUtils.getPasswordByString("admin", "6Xm8h95s");
+//        System.out.println(admin);
+    }
 
 }

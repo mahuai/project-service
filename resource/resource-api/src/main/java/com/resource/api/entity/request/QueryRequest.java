@@ -12,54 +12,34 @@ public class QueryRequest implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public QueryRequest() {
+
+    private Object condition;
+
+    private Object value;
+
+
+    public QueryRequest(Object condition, Object value) {
+
+        this.condition = condition;
+        this.value = value;
     }
 
-    public QueryRequest(Object whereContentType) {
-        this.whereContentType = whereContentType;
+    public Object getCondition() {
+        return condition;
     }
 
-    public QueryRequest(String objectId) {
-        this.objectId = objectId;
+    public void setCondition(Object condition) {
+        this.condition = condition;
     }
 
-    private String objectId;
-
-    private Object whereFilename;
-
-    private Object whereContentType;
-
-    private Object whereMetaData;
-
-    public String getObjectId() {
-        return objectId;
+    public Object getValue() {
+        return value;
     }
 
-    public void setObjectId(String objectId) {
-        this.objectId = objectId;
+    public void setValue(Object value) {
+        this.value = value;
     }
 
-    public Object getWhereFilename() {
-        return whereFilename;
-    }
-
-    public void setWhereFilename(Object whereFilename) {
-        this.whereFilename = whereFilename;
-    }
-
-    public Object getWhereContentType() {
-        return whereContentType;
-    }
-
-    public void setWhereContentType(Object whereContentType) {
-        this.whereContentType = whereContentType;
-    }
-
-    public Object getWhereMetaData() {
-        return whereMetaData;
-    }
-
-    public void setWhereMetaData(Object whereMetaData) {
-        this.whereMetaData = whereMetaData;
-    }
 }
+
+

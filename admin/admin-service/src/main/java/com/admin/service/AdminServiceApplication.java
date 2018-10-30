@@ -8,6 +8,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * @author ms
+ * @see SpringApplication
+ * {@link #main(String[])}
  */
 @SpringBootApplication
 @EnableTransactionManagement
@@ -18,5 +20,4 @@ public class AdminServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminServiceApplication.class, args);
     }
-
 }

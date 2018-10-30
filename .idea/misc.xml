@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/third-party/third-party-service/pom.xml" />
         <option value="$PROJECT_DIR$/resource/resource-service/pom.xml" />
         <option value="$PROJECT_DIR$/admin/admin-api/pom.xml" />
+        <option value="$PROJECT_DIR$/manager/manager-service/pom.xml" />
       </list>
     </option>
   </component>

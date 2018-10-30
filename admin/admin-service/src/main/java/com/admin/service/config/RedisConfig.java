@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.connection.RedisClusterConfiguration;
 import org.springframework.data.redis.connection.RedisNode;
 import org.springframework.data.redis.connection.RedisSentinelConfiguration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
@@ -16,6 +17,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.List;
 
 
 /**
@@ -49,7 +51,6 @@ public class RedisConfig {
         redisStandaloneConfiguration.setPort(properties.getPort());
         return redisStandaloneConfiguration;
     }
-
 
 
     @Bean

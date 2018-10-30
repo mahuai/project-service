@@ -30,14 +30,14 @@ public class ProducerThread extends Thread {
         for (int i = 0; i < SIZE; i++) {
             logger.info("send start------------------------>");
 
-            try {
+            /*try {
                 RecordMetadata o = (RecordMetadata) producer.send(new ProducerRecord<>("project-topic", Integer.toString(i), Integer.toString(i))).get();
                 logger.info("offset------------->:{}", o.offset());
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
                 e.printStackTrace();
-            }
+            }*/
             try {
                 /**
                  * producer.send().get() 返回 RecordMetadata 可以获取消息的偏移量

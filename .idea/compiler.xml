@@ -18,6 +18,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="manager" target="1.5" />
+      <module name="manager-api" target="1.5" />
+      <module name="manager-service" target="6" />
       <module name="resoucre" target="1.5" />
     </bytecodeTargetLevel>
   </component>

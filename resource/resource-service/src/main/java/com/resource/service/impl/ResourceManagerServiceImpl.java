@@ -14,6 +14,7 @@ import com.resource.api.entity.response.FileResponse;
 import com.resource.api.entity.response.ResourceResponse;
 import com.resource.api.exception.ResourceManagerException;
 import com.resource.api.service.ResourceManagerService;
+import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,6 +51,7 @@ public class ResourceManagerServiceImpl implements ResourceManagerService {
     @Autowired
     private MongoDbFactory mongoDbFactory;
 
+
     /**
      * 上传
      *
@@ -82,10 +84,10 @@ public class ResourceManagerServiceImpl implements ResourceManagerService {
     @Override
     public FileResponse getObjectIdByFile(QueryRequest queryRequest) throws ResourceManagerException {
         try {
-            GridFSFile file = gridFsTemplate.findOne(new Query(new GridFsCriteria("_id").is(queryRequest.getObjectId())));
+            GridFSFile file = gridFsTemplate.findOne(new Query(new GridFsCriteria(queryRequest.getCondition().toString()).is(queryRequest.getValue())));
             if (file != null) {
-                GridFsResource resource = conversion(file, queryRequest.getObjectId());
-                return new FileResponse(file.getChunkSize(), file.getFilename(), String.valueOf(file.getLength()), readStream(resource.getInputStream()));
+                GridFsResource resource = conversion(file, queryRequest.getValue().toString());
+                return new FileResponse(file.getChunkSize(), file.getFilename(), String.valueOf(file.getLength()), String.valueOf(file.getMetadata().get("_contentType")), readStream(resource.getInputStream()));
             }
         } catch (Exception e) {
             logger.error("get object id by file error:", e);
@@ -105,13 +107,14 @@ public class ResourceManagerServiceImpl implements ResourceManagerService {
     public List<FileResponse> getConditionsByFiles(QueryRequest queryRequest) throws ResourceManagerException {
         try {
             List<FileResponse> fileList = new ArrayList<>();
-            GridFSFindIterable iterable = gridFsTemplate.find(new Query().addCriteria(GridFsCriteria.whereFilename().is(queryRequest.getWhereFilename())));
+            GridFSFindIterable iterable;
+            iterable = queryRequest != null ? gridFsTemplate.find(new Query().addCriteria(conversion(queryRequest).is(queryRequest.getValue()))) : gridFsTemplate.find(new Query());
             MongoCursor<GridFSFile> iterator = iterable.iterator();
             while (iterator.hasNext()) {
                 GridFSFile file = iterator.next();
                 if (file != null) {
-                    GridFsResource resource = conversion(file, queryRequest.getObjectId());
-                    FileResponse response = new FileResponse(file.getChunkSize(), file.getFilename(), String.valueOf(file.getLength()), readStream(resource.getInputStream()));
+                    GridFsResource resource = conversion(file, file.getObjectId().toString());
+                    FileResponse response = new FileResponse(file.getChunkSize(), file.getFilename(), String.valueOf(file.getLength()), String.valueOf(file.getMetadata().get("_contentType")), readStream(resource.getInputStream()));
                     fileList.add(response);
                 }
             }
@@ -120,6 +123,10 @@ public class ResourceManagerServiceImpl implements ResourceManagerService {
             logger.error("get object id by file error: ", e);
             throw new ResourceManagerException("get object id by file error");
         }
+    }
+
+    protected GridFsCriteria conversion(QueryRequest queryRequest) {
+        return (GridFsCriteria) queryRequest.getCondition();
     }
 
 

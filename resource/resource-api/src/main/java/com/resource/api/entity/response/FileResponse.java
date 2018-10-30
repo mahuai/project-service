@@ -12,10 +12,11 @@ public class FileResponse implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    public FileResponse(Integer chunkSize,String fileName, String contentLength, byte[] content) {
-        this.chunkSize=chunkSize;
+    public FileResponse(Integer chunkSize, String fileName, String contentLength, String contentType, byte[] content) {
+        this.chunkSize = chunkSize;
         this.fileName = fileName;
         this.contentLength = contentLength;
+        this.contentType = contentType;
         this.content = content;
     }
 
